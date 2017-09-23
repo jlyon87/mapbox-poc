@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+		<title>Mapbox Testing</title>
+		<link href='https://api.mapbox.com/mapbox-gl-js/v0.40.1/mapbox-gl.css' rel='stylesheet' />
+		<link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.1.1/mapbox-gl-geocoder.css' type='text/css' />
+		<link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v1.0.0/mapbox-gl-draw.css' type='text/css'/>
+		<link rel="stylesheet" href="assets/css/master.css">
+		<style media="screen">
+		.calculation-box {
+			height: 140px;
+			width: 150px;
+			position: absolute;
+			top: 210px;
+			left: 10px;
+			background-color: rgba(255, 255, 255, .9);
+			padding: 15px;
+			text-align: center;
+		}
+
+		#calculate {
+			min-height: 20px;
+			background-color: #3887be;
+			color: #fff;
+			font-family: 'Open Sans';
+			border-radius: 5px;
+			padding: 10px;
+			cursor: pointer;
+			margin: 10px 0;
+		}
+
+		.calculation-box>p {
+			font-family: 'Open Sans';
+			margin: 0;
+			font-size: 13px;
+		}
+		</style>
+	</head>
+	<body>
+
+		<div class="container">
+			Loaded.
+			<div id="mapbox" style="width: 900px; height: 650px"></div>
+		</div>
+		<div class='calculation-box'>
+			<p>Draw a polygon using the draw tools.</p>
+			<div id='calculate' class='button button'>Calculate area</div>
+			<div id='calculated-area'></div>
+		</div>
+
+		<script src='https://api.tiles.mapbox.com/mapbox.js/plugins/turf/v3.0.11/turf.min.js'></script>
+		<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v1.0.0/mapbox-gl-draw.js'></script>
+		<script src="https://api.mapbox.com/mapbox-gl-js/v0.40.1/mapbox-gl.js"></script>
+		<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.1.1/mapbox-gl-geocoder.min.js"></script>
+
+		<script src="assets/js/mapbox-api.js" type="text/javascript"></script>
+		<script src="assets/js/app.js" type="text/javascript"></script>
+	</body>
+</html>
